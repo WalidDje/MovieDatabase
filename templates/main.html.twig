@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<html>
+    <head>
+        <title>Page d'accueil</title>
+    </head>
+    <body>
+        <h1 class="text-primary">Bienvenu dans la page d'accueil</h1>
+
+
+        <div class="movie_list">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src={{ movies.poster_path }} alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title text-center">{{ movies.title }}</h5>
+                  <p class="card-text">{{ movies.overview }}</p>
+                  <a href="/movie" class="btn btn-primary">Voir les détails du film</a>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
+{% endblock %}
